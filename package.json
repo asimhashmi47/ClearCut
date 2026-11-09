@@ -1,0 +1,40 @@
+{
+  "name": "remove-background",
+  "private": true,
+  "version": "0.0.0",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "copy-runtime": "node scripts/copy-runtime.mjs",
+    "predev": "npm run copy-runtime",
+    "dev": "vite",
+    "prebuild": "npm run copy-runtime",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "node --test \"tests/unit/*.test.ts\" \"tests/integration/*.test.ts\"",
+    "test:unit": "node --test \"tests/unit/*.test.ts\"",
+    "test:e2e": "playwright test",
+    "hash-models": "node scripts/hash-models.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/big-shoulders-display": "^5.3.0",
+    "@fontsource-variable/schibsted-grotesk": "^5.3.0",
+    "@huggingface/transformers": "^4.3.2",
+    "framer-motion": "^14.10.1",
+    "lucide-react": "^1.70.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.90.0",
+    "sharp": "^0.35.5",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6"
+  }
+}

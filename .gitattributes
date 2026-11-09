@@ -1,0 +1,2 @@
+# Model files are pinned by hash, so git must never rewrite their line endings.
+public/models/** binary
